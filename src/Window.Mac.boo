@@ -8,7 +8,7 @@ class Window(object):
 	private window as NSWindow
 
 	def constructor( ):
-		windowRect = Rectangle( 100, 100, 300, 300 )
+		windowRect = RectangleF( 100, 100, 300, 300 )
 		window = NSWindow( windowRect,
 			NSWindowStyle.Resizable | NSWindowStyle.Closable | NSWindowStyle.Titled,
 			NSBackingStore.Buffered, false )
@@ -24,3 +24,7 @@ class Window(object):
 			return false
 		set:
 			window.MakeKeyAndOrderFront( window )
+	
+	contentSize as SizeF:
+		set:
+			window.SetContentSize( value )
