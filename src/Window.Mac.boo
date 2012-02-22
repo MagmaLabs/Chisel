@@ -1,7 +1,7 @@
 namespace Chisel
 
 import System.Drawing
-import MonoMac.Foundation
+#import MonoMac.Foundation
 import MonoMac.AppKit
 
 class Window(object):
